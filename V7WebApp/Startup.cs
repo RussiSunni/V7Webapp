@@ -48,6 +48,10 @@ namespace V7WebApp
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                // endpoints.MapGet("/users", (context) =>
+                // {
+                //     var users = app.ApplicationServices.GetServices<JsonFileUserService>().GetUsers();
+                // });
             });
         }
     }

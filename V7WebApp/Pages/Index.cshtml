@@ -9,7 +9,14 @@
     <p>for checking how the app is used</p>
 </div>
 
-@foreach (var user in Model.Users)
-{
-    <h2>@user.Name</h2>
-}
+
+<div class="card-columns">
+    @foreach (var user in Model.Users)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@user.Name</h5>
+            </div>
+        </div>
+    }
+</div>
