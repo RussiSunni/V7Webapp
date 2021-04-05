@@ -8,3 +8,8 @@
     <h1 class="display-4">V7 Webapp</h1>
     <p>for checking how the app is used</p>
 </div>
+
+@foreach (var user in Model.Users)
+{
+    <h2>@user.Name</h2>
+}
