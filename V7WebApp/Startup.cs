@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -8,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using V7WebApp.Services;
+using V7WebApp.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace V7WebApp
 {
@@ -50,7 +53,9 @@ namespace V7WebApp
                 endpoints.MapRazorPages();
                 // endpoints.MapGet("/users", (context) =>
                 // {
-                //     var users = app.ApplicationServices.GetServices<JsonFileUserService>().GetUsers();
+                //    var users = app.ApplicationServices.GetServices<JsonFileUserService>().GetUsers();
+                //var json = JsonSerializer.Serialize<IEnumerable<User>>(users);
+                //return context.Response.WriteAsync(json);
                 // });
             });
         }

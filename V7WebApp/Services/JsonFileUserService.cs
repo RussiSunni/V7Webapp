@@ -18,7 +18,7 @@ namespace V7WebApp.Services
 
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "Users.json"); }
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "users.json"); }
         }
 
         public IEnumerable<User> GetUsers()
